@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bangla Speech Emotion Recognition</title>
+   
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <link rel="stylesheet" href='/staticFiles/main.css' />
+  </head>
+  <body style="background-color:mediumseagreen">
+    <h1 style="text-align: center;color:rebeccapurple">Bangla Speech Emotion Recognition</h1>
+  
+    <form method="POST" enctype="multipart/form-data" action="/" style="display:flex;justify-content: center;">
+        <input type="file" id="myFile" name="uploaded-file" accept=".wav">
+        <input type="submit" value="Submit">
+    </form>
+  
+  <br>
+  <p style="color:FireBrick;text-align: center;">Choose audio file to upload</p>
+  <!--<form action="/show_data" target="_blank">
+        <input type="submit" value="Show Image" />
+    </form>
+    <br>
+    <img src="{{ user_image }}" alt="mri img" width="150" height="150"><br>-->
+    <div style="display:flex;justify-content: center;">
+    <audio controls >
+      
+      <source src="{{ user_audio }}" type="audio/mpeg" >
+    </audio>
+  </div>
+    <br>
+    <br>
+    <div id="waveform">
+
+    </div>
+   <br>
+   <h4 style="color:black; text-align: center;font-size: 30px;">
+   {{ prediction_text }} </h4>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <h4 style="color: whitesmoke; text-align: center;font-size: 20px;">
+   Developed By: Shakil </h4>
+  </body>
+</html>
